@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Byan - Explore Latest Mobile Phones &amp; Deals</title>
+  <meta name="description" content="Biyan brings you the latest smartphones from top brands like Apple, Samsung, OnePlus, Vivo, and Xiaomi. Explore features, compare prices, and get the best deals." />
+  <meta name="keywords" content="smartphones, mobile showroom, iPhone, Samsung, OnePlus, Vivo, Xiaomi, mobile deals, latest phones, Smartphone Sheroo" />
+  <meta name="author" content="Abhishek" />
+
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animation.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet" />
+
+  <meta property="og:title" content="Biyan - Your Mobile Destination" />
+  <meta property="og:description" content="Discover smartphones from Apple, Samsung, OnePlus, and more. Best showroom deals with top quality service." />
+  <meta property="og:image" content="https://yourdomain.com/images/showroom-banner.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #cccccc56;
+      height: 100%;
+      width: 100%;
+    }
+
+    .nav {
+      width: 100%;
+      height: 100px;
+      background-color: rgb(52, 35, 199);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-1,
+    .nav-2 {
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      font-family: cursive;
+      display: flex;
+      align-items: center;
+      background-color: rgb(52, 35, 199);
+    }
+
+    .Logo-size {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      background-color: rgb(52, 35, 199);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .nav .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+        text-align: center;
+      }
+
+      .nav-1,
+      .nav-2 {
+        justify-content: center;
+        font-size: 18px;
+        margin: 5px 0;
+      }
+
+      .Logo-size {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .cart {
+      width: 40px;
+      height: 40px;
+      color: white;
+    }
+
+    .header {
+      width: 100%;
+      height: 120px;
+      background-color: white;
+    }
+
+    .search-bar {
+      margin-top: 40px;
+      margin-left: 30px;
+      width: 400px;
+      height: 40px;
+      padding: 10px;
+      float: left;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .Search {
+      width: 100px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+      float: left;
+      font-weight: bold;
+      font-size: 19px;
+    }
+
+    .float-right {
+      float: right;
+      margin-right: 40px;
+      margin-top: 40px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .table_row{
+      text-decoration: none;
+      margin-left: 40px;
+      color:black;
+    }
+
+    .footer
+    {
+       width:100%;
+       height:870px;
+       border:2px black solid;
+       background-color: rgba(0, 0, 0, 0.884);
+       float:left;
+       margin-top:300px;
+       border-radius: 20px;
+       margin-left:5px;
+       margin-right:10px;
+    }
+
+    .footer-text
+    {
+   font-size: 80px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight: bolder;
+   color:white;
+   text-align: center;
+   padding-top: 20px;
+
+    }
+
+
+    .row-3
+    {
+    width:100%;
+    height:700px;
+
+    }
+
+    .column-3
+    {
+     width:500px;
+     height:500px;
+     border:2px black solid;
+     background-color: rgb(245, 123, 239);
+     float:left;
+     margin:70px;
+    }
+
+    #address
+    {
+   font-size: 30px;
+   font-weight: lighter;
+   padding-top: 20px;
+   padding-left: 10px;
+    }
+
+    .customer
+    {
+      font-size: 30px;
+      font-weight: lighter;
+      text-align: center;
+      padding-top: 20px;
+      padding-left: 10px;
+    }
+    a{
+      text-decoration: none;
+    }
+
+    #contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 40px auto;
+      border-radius: 15px;
+      max-width:100%;
+      border:2px black solid ;
+    }
+
+    .contact-info, .contact-form, .map {
+      flex: 1 1 350px;
+      margin: 20px;
+    }
+
+    .contact-info h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      font-size: 25px;
+      color: #444;
+      margin: 12px 0;
+    }
+
+    .contact-info i {
+      color: #ff007f;
+      margin-right: 10px;
+    }
+
+    .contact-form h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 25px;
+    }
+
+    .contact-form button {
+      padding: 10px 25px;
+      background-color: #ff007f;
+      border: none;
+      color: white;
+      font-size: 28px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 350px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .box-1
+  {
+    width:100%;
+    height:1170px;
+    background-color: #ccc;
+    margin-top:100px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+
+  }
+
+  .login-container
+  {
+    width:60%;
+    height:600px;
+    margin:70px auto;
+    border:2px rgba(0, 0, 0, 0.39) solid;
+    border-radius: 15px;
+  background-color: #008ba370;
+  text-align: center;
+  font-size: 50px;
+  }
+
+  .login
+  {
+margin:20px auto;
+width:40%;
+height:60px;
+font-size: 25px;
+border-radius: 10px;
+padding:13px;
+
+  }
+
+  .login-1
+  {
+background-color: #ff007f;
+width:200px;
+height:60px;
+font-size: 30px;
+  }
+
+.section-p
+{
+font-size: 40PX;
+margin-top:30px;
+margin-left:40px;
+color:blue;
+
+}
+
+.section-button
+{
+    font-size: 35px;
+    background-color: green;
+    width:110px; 
+    height:50px;
+    color:rgb(0, 0, 0);
+   margin-left: 40px;
+   margin-top: 15px;
+}
+
+.phone-info
+{
+display: flex;
+justify-content: center;
+justify-content: space-between;
+} 
+
+.phone-info-1
+{
+float: left;
+width:33%;
+height:1200px;
+border:2px rgba(0, 0, 0, 0.5) solid;
+margin:30px;
+border-radius: 15px;
+}
+.phone-info-2
+{
+float: right;
+width:70%;
+height:2550px;
+margin-top: 30px;
+margin-left:100px;
+margin-right: 20px;
+border:2px rgba(0, 0, 0, 0.5) solid;
+border-radius: 15px;
+}
+
+.photo-size
+{
+width:95%;
+height:750px;
+margin-left:15px;
+margin-top:40px;
+}
+
+.view-details
+    {
+      font-size: 20px;
+      font-weight: bold;
+      width:150px;
+      height:50px;
+      background-color: rgba(0, 0, 255, 0.76);
+      color:white;
+      text-align: center;
+      margin-left:20px;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+
+    .p
+    {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    padding-top:15px;
+    text-align: center;
+    }
+    
+    .button
+    {
+      
+      margin-left:180px;
+      font-size: 18px;
+      font-weight: bolder;
+      background-color: rgb(221, 221, 230);
+      color:rgb(0, 0, 0);
+      width:80px;
+      height:40px;
+      
+    }
+</style>
+</head>
+<body>
+
+    <!-- Header section -->
+  
+    <nav>
+    <div class="nav">
+      <div class="nav-1">
+        <img class="Logo-size" src="Byan-logo-removebg-preview.png" alt="Byan Logo" />
+        Byan Smartphones
+      </div>
+      <div class="nav-2">
+        India's Largest Smartphone Shop    <a href="#"><img class="cart" src="shopping-cart.png" alt=""></a>&nbsp;
+      </div>
+    </div>
+  
+    <div class="header">
+      <div class="float-left">
+      <form >
+        <input class="search-bar" type="search" name="search" placeholder="Search your item" >
+        <input class="Search" type="submit" name="search" value="Search">
+    </form>
+      </div>
+      <div class="float-right">
+      <tr>
+        <th ><a href="Home.html" class="table_row"  >Home</a></t>
+            <th ><a href="products.html" class="table_row">Products</a></th>
+            <th ><a href="Brands.html" class="table_row" >Brands</a></th>
+            <th ><a href="Contect.html" class="table_row" >Contect</a></th>
+            <th ><a href="Login.html" class="table_row" >Login</a></th>
+            <th ><a href="Register.html" class="table_row" >Register</a></th>
+      </tr>
+      </div>
+  </div>
+  </nav>
+
+
+  <section>
+    
+<div class="phone-info">
+    <div class="phone-info-1" >
+       <img class="photo-size"  src="redmi-11.jpg" alt="image">
+        <a style="text-decoration: none;" href="#">
+            <p class="p">REDMI Note  13 5G <br> (olive Green)</p>
+          </a>
+          <button class="button">4.8☆</button>(19000)
+          <p class="p">
+            <strong style="font-size:24px;">₹17,999 </strong><br>
+            <del> ₹29,999 </del><br>
+            <span style="color:darkgreen; font-size: 20px;">8% off</span>
+          </p>
+        <a href="#"><button class="view-details" style="float:left">Add To Cart</button></a>
+        <a href="order-now.html"><button class="view-details" style="float:right">Order Now!</button></a>
+      </div>
+
+
+    <div class="phone-info-2">
+        <pre style="font-size: 30px; color:blue">
+
+                        Specifications
+
+
+    General
+
+    In The Box               Handset, USB-C to Lightning Cable,
+                             Documentation
+    
+    Model Number            
+    
+    Model Name              REDMI Note  13 5G
+    
+    Color                    olive Green
+    
+    Browse Type              Smartphones
+    
+    SIM Type                 Dual Sim(Nano + eSIM)
+    
+    Hybrid Sim Slot          No
+    
+    Touchscreen              Yes
+    
+    OTG Compatible           No
+   
+    Sound Enhancements       Built-in Stereo Speaker
+  
+
+
+                 Display Features
+
+
+    Display Size             15.49 cm (6.1 inch)
+    
+    Resolution               2532 x 1170 Pixels
+    
+    Resolution Type          Super Retina XDR Display
+    
+    GPU                      5 Core
+    
+    Display Type             Super Retina XDR Display
+    
+
+
+                     Battery & Power Features
+
+
+    Battery Capacity         3279 mAh
+    
+
+                     Dimensions
+
+
+    Width                    71.5 mm
+    
+    Height                   146.7 mm
+    
+    Depth                    7.8 mm
+   
+    Weight                   172 g
+    
+
+                    Warranty
+
+
+    Warranty Summary          1 year warranty for phone
+                              and 1 year warranty 
+                              for in Box Accessories
+    .
+    Warranty Service Type     NA  
+    
+    Domestic Warranty         1 Year
+    
+    </pre>
+      </div>
+   
+</div>
+  </section>
+
+
+  <footer>
+    <footer class="footer">
+      <div>
+        <h1 class="footer-text">Byan Smartphones</h1>
+        <div class="row-3">
+          <div class="column-3">
+            
+          <h2 style="padding-top: 30px; text-align:center; font-size: 40px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:blue">Contact Information</h2>
+          <a href="#"><pre id="address"><i  class="fas fa-map-marker-alt"></i>  Azizpur Kalan,Yamunanagar
+                Haryana</pre></a>
+    
+    
+        <a href="#"><pre id="address"><i class="fas fa-phone-alt"></i>  +91 98177 58032 
+       +91 90531 58032</pre></a>
+    
+        <a href="#"><pre id="address"><i class="fas fa-envelope"></i>   2005abhishekdhiman-
+      @gmail.com</pre></a>
+    
+        <a href="#"><pre id="address"><i class="fab fa-instagram"></i> @abhishek_dhiman_04</pre></a>
+              
+          </div>
+          <div class="column-3">
+            <h2 style="padding-top: 30px; text-align:center; font-size: 40px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color:blue">Customer Service</h2>
+            <a href="#"><p class="customer">Order Tracking</p></a>
+            <a href="#"><p class="customer">shipping info.</p></a>
+            <a href="#"><p class="customer">Return Policy</p></a>
+            <a href="#"><p class="customer">Online Service</p></a>
+            <a href="#"><p class="customer">FAQs</p></a>
+          </div>
+          <div class="column-3">
+            <div class="contact-form">
+              <h2>Send a Message</h2>
+              <form>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </div><h1 style="color:white; text-align: center; font-weight: lighter; font-size: 25px;">@2025 All Right Reserved. Designed by Byan Smartphones</h1>
+      </div>
+  
+    </footer>
+</head>
+</html>
