@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Byan - Explore Latest Mobile Phones & Deals</title>
+  <meta name="description" content="Biyan brings you the latest smartphones from top brands like Apple, Samsung, OnePlus, Vivo, and Xiaomi. Explore features, compare prices, and get the best deals." />
+  <meta name="keywords" content="smartphones, mobile showroom, iPhone, Samsung, OnePlus, Vivo, Xiaomi, mobile deals, latest phones, Smartphone Sheroo" />
+  <meta name="author" content="Abhishek" />
+
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animation.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <meta property="og:title" content="Biyan - Your Mobile Destination" />
+  <meta property="og:description" content="Discover smartphones from Apple, Samsung, OnePlus, and more. Best showroom deals with top quality service." />
+  <meta property="og:image" content="https://yourdomain.com/images/showroom-banner.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #d1c4e9, #f8bbd0);
+      min-height: 100vh;
+      font-size: 20px;
+    }
+
+    .nav {
+      width: 100%;
+      height: 100px;
+      background-color: rgb(52, 35, 199);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-1, .nav-2 {
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      font-family: cursive;
+      display: flex;
+      align-items: center;
+    }
+
+    .Logo-size {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .cart {
+      width: 40px;
+      height: 40px;
+      color: white;
+    }
+
+    .header {
+      width: 100%;
+      padding: 20px;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .search-bar {
+      width: 400px;
+      height: 40px;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .Search {
+      height: 40px;
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    .nav-links a {
+      margin: 0 15px;
+      font-size: 25px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      background: #fff;
+      max-width: 600px;
+      margin: 2rem auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 25px;
+    }
+
+    .track-container h2 {
+      text-align: center;
+      color: #0a0a23;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group {
+      margin-bottom: 1rem;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #0a0a23;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 20px;
+    }
+
+    button:hover {
+      background: #1a1a3c;
+    }
+
+    .status-box {
+      margin-top: 2rem;
+      display: none;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #e9f7ef;
+    }
+
+    .status-box p {
+      margin: 0.5rem 0;
+      font-size: 30px;
+    }
+
+    .status-box i {
+      color: #2ecc71;
+      margin-right: 0.5rem;
+    }
+
+    .footer {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      padding: 50px 20px;
+      border-radius: 20px;
+      margin-top: 100px;
+      font-size: 30px;
+    }
+
+    .footer h1 {
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 40px;
+    }
+
+    .footer .row-3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .footer .column-3 {
+      width: 300px;
+      margin: 20px;
+    }
+
+    .footer .column-3 h2 {
+      text-align: center;
+      font-size: 27px;
+      color: #00ffff;
+    }
+
+    .footer a, .footer p, .footer pre {
+      color: white;
+      font-size: 30px;
+      margin-right: 20px;
+      display: block;
+    }
+
+    .footer form input, .footer form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .footer form button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      background: #ff007f;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-1, .nav-2 {
+        font-size: 18px;
+      }
+
+      .search-bar {
+        width: 100%;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 50px;
+      }
+
+      .nav-links a {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav">
+      <div class="nav-1">
+        <img class="Logo-size" src="Byan-logo-removebg-preview.png" alt="Byan Logo" />
+        Byan Smartphones
+      </div>
+      <div class="nav-2">
+        India's Largest Smartphone Shop
+        <a href="#"><img class="cart" src="shopping-cart.png" alt="Cart Icon"></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="header">
+    <form style="display:flex; align-items:center;">
+      <input class="search-bar" type="search" name="search" placeholder="Search your item">
+      <input class="Search" type="submit" value="Search">
+    </form>
+    <div class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="Brands.html">Brands</a>
+      <a href="Contect.html">Contact</a>
+      <a href="Login.html">Login</a>
+      <a href="Register.html">Register</a>
+    </div>
+  </div>
+
+  <section>
+    <div class="track-container">
+      <h2><i class="fas fa-box"></i> Track Your Order</h2>
+      <div class="input-group">
+        <label for="orderId">Enter Order ID:</label>
+        <input type="text" id="orderId" placeholder="e.g. ORD123456789">
+      </div>
+      <button onclick="trackOrder()">Track Now</button>
+      <div class="status-box" id="orderStatus"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <h1>Byan Smartphones</h1>
+    <div class="row-3">
+      <div class="column-3">
+        <h2>Contact Information</h2>
+        <pre><i class="fas fa-map-marker-alt"></i> Azizpur Kalan, Yamunanagar, Haryana</pre>
+        <pre><i class="fas fa-phone-alt"></i> +91 98177 58032 / 90531 58032</pre>
+        <pre><i class="fas fa-envelope"></i> 2005abhishekdhiman-@gmail.com</pre>
+        <pre><i class="fab fa-instagram"></i> @abhishek_dhiman_04</pre>
+      </div>
+      <div class="column-3">
+        <h2>Customer Service</h2>
+        <p>Order Tracking</p>
+        <p>Shipping Info</p>
+        <p>Return Policy</p>
+        <p>Online Service</p>
+        <p>FAQs</p>
+      </div>
+      <div class="column-3">
+        <h2>Send a Message</h2>
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">@2025 All Rights Reserved. Designed by Byan Smartphones</div>
+  </footer>
+
+  <script>
+    function trackOrder() {
+      const orderId = document.getElementById('orderId').value.trim();
+      const statusBox = document.getElementById('orderStatus');
+
+      const statusMap = {
+        "ORD123456789": {
+          status: "Shipped",
+          delivery: "2nd May 2025",
+          location: "Yamunanagar Hub"
+        },
+        "ORD987654321": {
+          status: "Out for Delivery",
+          delivery: "29th April 2025",
+          location: "Kurukshetra Facility"
+        },
+        "ORD111222333": {
+          status: "Delivered",
+          delivery: "27th April 2025",
+          location: "Delivered to customer"
+        }
+      };
+
+      if (orderId === "") {
+        alert("Please enter a valid Order ID.");
+        statusBox.style.display = "none";
+      } else if (statusMap[orderId]) {
+        const data = statusMap[orderId];
+        statusBox.innerHTML = `
+          <p><i class="fas fa-check-circle"></i> <strong>Status:</strong> ${data.status}</p>
+          <p><i class="fas fa-truck-moving"></i> <strong>Expected Delivery:</strong> ${data.delivery}</p>
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Current Location:</strong> ${data.location}</p>
+        `;
+        statusBox.style.display = "block";
+      } else {
+        statusBox.innerHTML = `
+          <p><i class="fas fa-exclamation-circle"></i> <strong>Status:</strong> Order ID not found. Please check again.</p>
+        `;
+        statusBox.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
